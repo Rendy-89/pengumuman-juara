@@ -1,0 +1,18 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f2f2f2;
+  text-align: center;
+}
+
+#hasil {
+  background: white;
+  width: 300px;
+  margin: 30px auto;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.juara {
+  font-size: 18px;
+  margin: 10px 0;
+}
