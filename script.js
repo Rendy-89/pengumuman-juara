@@ -7,21 +7,23 @@ fetch(sheetURL)
 
     // Ambil baris Juara (sesuaikan nomor baris)
     // Index dimulai dari 0
-    const juaraData = rows.slice(13, 16); // baris 14–16
+    const juaraData = rows.slice(11, 14); // baris 12–14 (Juara 1, 2, 3)
 
     const container = document.getElementById("juara-container");
     container.innerHTML = "";
 
     juaraData.forEach(row => {
-      const posisi = row[0];   // Juara 1
-      const poster = row[1];   // Poster 01
+      const posisi = row[0]?.trim();   // Juara 1
+      const poster = row[1]?.trim();   // Poster 01
 
-      const div = document.createElement("div");
-      div.className = "juara-box";
-      div.innerHTML = `
-        <h2>${posisi}</h2>
-        <p><b>${poster}</b></p>
-      `;
-      container.appendChild(div);
+      if (posisi && poster) {
+        const div = document.createElement("div");
+        div.className = "juara-box";
+        div.innerHTML = `
+          <h2>${posisi}</h2>
+          <p><b>${poster}</b></p>
+        `;
+        container.appendChild(div);
+      }
     });
   });
