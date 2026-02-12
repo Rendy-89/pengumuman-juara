@@ -4,6 +4,13 @@ body {
   text-align: center;
 }
 
+body {
+  background-image: url("img/background.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 #hasil {
   background: rgb(248, 248, 248);
   width: 300px;
