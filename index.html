@@ -4,8 +4,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pengumuman Pemenang</title>
-
-  <!-- HUBUNGKAN KE CSS -->
   <link rel="stylesheet" href="style.css">
 </head>
 
@@ -13,8 +11,8 @@
 
 <div class="overlay">
 
-  <!-- LOGO -->
-  <div class="logo-wrapper fade-in">
+  <!-- LOGO DENGAN BACKGROUND -->
+  <div class="logo-box">
     <div class="logo-row">
       <img src="img/logo-pt1.png">
       <img src="img/logo-pt2.png">
@@ -26,50 +24,66 @@
     </div>
   </div>
 
-  <!-- JUDUL -->
-  <h1 class="fade-in delay-1">🏆 Pengumuman Pemenang</h1>
+  <h1>🏆 Pengumuman Pemenang</h1>
 
-  <!-- POSTER -->
-  <h2 class="fade-in delay-2">🖼 Lomba Poster</h2>
-  <div class="poster-container">
+  <!-- TOMBOL -->
+  <button onclick="tampilkanJuara()" class="btn">
+    🎉 Klik untuk Tampilkan Juara
+  </button>
 
-    <div class="poster fade-in delay-1">
-      <img src="img/juara1.jpg">
-      <p>🥇 Juara 1</p>
-      <p>Nama Peserta</p>
+  <!-- SEMUA KONTEN DISEMBUNYIKAN DULU -->
+  <div id="konten" class="hidden">
+
+    <!-- POSTER -->
+    <h2>🖼 Lomba Poster</h2>
+    <div class="poster-container">
+
+      <div class="poster">
+        <img src="img/juara1.jpg">
+        <p>🥇 Juara 1</p>
+        <p>Nama Peserta</p>
+      </div>
+
+      <div class="poster">
+        <img src="img/juara2.jpg">
+        <p>🥈 Juara 2</p>
+        <p>Nama Peserta</p>
+      </div>
+
+      <div class="poster">
+        <img src="img/juara3.jpg">
+        <p>🥉 Juara 3</p>
+        <p>Nama Peserta</p>
+      </div>
+
     </div>
 
-    <div class="poster fade-in delay-2">
-      <img src="img/juara2.jpg">
-      <p>🥈 Juara 2</p>
-      <p>Nama Peserta</p>
+    <!-- VIDEO -->
+    <h2>🎥 Lomba Video</h2>
+    <div class="card">
+      <p>🥇 Juara 1 - Andi (Produksi)</p>
+      <p>🥈 Juara 2 - Budi (Engineering)</p>
+      <p>🥉 Juara 3 - Citra (HR)</p>
     </div>
 
-    <div class="poster fade-in delay-3">
-      <img src="img/juara3.jpg">
-      <p>🥉 Juara 3</p>
-      <p>Nama Peserta</p>
+    <!-- SAFETY TALK -->
+    <h2>🗣 Safety Talk</h2>
+    <div class="card">
+      <p>🥇 Juara 1 - Deni (Mining)</p>
+      <p>🥈 Juara 2 - Eka (HSE)</p>
+      <p>🥉 Juara 3 - Fajar (Logistik)</p>
     </div>
 
-  </div>
-
-  <!-- VIDEO -->
-  <h2 class="fade-in delay-3">🎥 Lomba Video</h2>
-  <div class="card delay-4">
-    <p>🥇 Juara 1 - Andi (Produksi)</p>
-    <p>🥈 Juara 2 - Budi (Engineering)</p>
-    <p>🥉 Juara 3 - Citra (HR)</p>
-  </div>
-
-  <!-- SAFETY TALK -->
-  <h2 class="fade-in delay-4">🗣 Safety Talk</h2>
-  <div class="card delay-5">
-    <p>🥇 Juara 1 - Deni (Mining)</p>
-    <p>🥈 Juara 2 - Eka (HSE)</p>
-    <p>🥉 Juara 3 - Fajar (Logistik)</p>
   </div>
 
 </div>
+
+<!-- SCRIPT -->
+<script>
+function tampilkanJuara() {
+  document.getElementById("konten").classList.remove("hidden");
+}
+</script>
 
 </body>
 </html>
